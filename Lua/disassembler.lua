@@ -1,4 +1,5 @@
 -- Disassembler --
+-- THIS IS THE OLD DISASSEMBLER, WILL UPDATE TO THE NEW ONE WHEN I GET IT
 
 local instructionLegend = {
 	["0"] = {"MOV",3}, -- instructionName,totalSize
