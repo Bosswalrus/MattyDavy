@@ -1,4 +1,5 @@
 -- assembler --
+-- THIS IS THE OLD ASSEMBLER, WILL UPDATE TO THE NEW ONE WHEN I GET IT
 
 local assembly = [[
 	MOVimm ar, 2
