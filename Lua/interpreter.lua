@@ -1,7 +1,3 @@
---[[ DOCUMENTATION
-	Look at Documentation document
---]]
-
 local interpreterLib = {};
 local interpreterMetatable = {__index = interpreterLib};
 local registerIndex = {
@@ -109,46 +105,3 @@ function interpreterLib:interpretAll()
 		self:step();
 	end
 end
-
-
-
---[[
-	[00] MOVimm ar, 7		; ARG 2
-	[03] PUSH ar
-	[05] MOVimm ar, 10		; ARG 1
-	[08] PUSH ar
-	[10] CALL 20
-	[12] ADDimm sp, 2
-	[15] OUT sp
-	[17] OUT ar
-	[19] RET
-
-	[20] MOV br, sp
-	[23] ADDimm br, 1
-	[26] LOAD ar, br
-	[29] ADDimm br, 1
-	[32] ADD ar, br
-	[35] RET
---]]
-
-local instructions = {
-	"\1\0\50",
-	"\5\0",
-	"\1\0\69",
-	"\5\0",
-	"\12\20",
-	"\8\2\2",
-	"\15\2",
-	"\15\0",
-	"\13",
-	"\0\1\2",
-	"\8\1\1",
-	"\2\0\1",
-	"\8\1\1",
-	"\7\0\1",
-	"\13"
-};
-
-local ns = interpreterLib.new();
-ns:loadProgram(table.concat(instructions, ""));
-ns:interpretAll();
