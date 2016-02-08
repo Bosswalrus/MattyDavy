@@ -1,6 +1,6 @@
 # MattyDavy VM Documentation
 
-**Specifications**
+## Specifications
 - Register-based VM
 	- 1 byte register sizes
 - 256 bytes of free memory
