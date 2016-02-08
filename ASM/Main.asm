@@ -78,7 +78,7 @@ section .text
 		CALL	VM_StepAll
 
 		.End:
-
+		XOR	eax, eax
 		MOV	esp, ebp
 		POP	ebp
 		RET
