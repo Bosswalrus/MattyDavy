@@ -61,7 +61,7 @@ In the standard *MattyDavy ASM VM*, operand 1 and operand 2 are passed in regist
 | LoadBuffer	| ESI - pointer to buffer	| Loads a buffer into VM memory			|
 |		| ECX - size range: [0, 256]	|
 | LoadFile	| ESI - file name		| Loads 256 bytes of a file into VM memory	|
-| Init		| 				| Initialized the VM
+| Init		| 				| Initializes the VM
 |		|				| VM registers set to 0, enables execution	|
 | Step		|				| Steps one instruction				|
 | StepAll	|				| Steps until program terminates		|
