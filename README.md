@@ -12,7 +12,9 @@ A fun little side project created for educational purposes.
 - C-sided *MattyDavy* VM: *Matthew*
 - Assembly(x86)-sided *MattyDavy* VM: *Matthew* (see note below)
 
-The assembly-sided VM's instruction set slightly differs from the original instruction set. The original one actually contains a few mistakes (*ADD, ADDIMM, SUB, SUBIMM*) where memory was used for the second operand. As such, the C-sided and Lua-sided VM differs from the assembly-sided VM. No changes will be made to the VMs implemented in C or Lua, however if needed it's a simple fix. The *correct* instruction set is in a markdown file in the *ASM* folder.
+The assembly-sided VM's instruction set slightly differs from the original instruction set. The original one actually contains a few mistakes (*ADD, ADDIMM, SUB, SUBIMM*) where memory was used for the second operand. As such, the C-sided and Lua-sided VM differs from the assembly-sided VM. No changes will be made to the VMs implemented in C or Lua, however if needed it's a simple fix. The *correct* instruction set is in a markdown file in the *ASM* folder. 
+
+**Most programs have not been thoroughly tested, and the Lua-sided assembler is broken as of now.**
 
 **CntVM:** https://github.com/cntkillme/CntVM
 A more realistic project.
