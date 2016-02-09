@@ -21,7 +21,7 @@ VM_LoadBuffer:
 
 VM_LoadFile:
 	; esi = file name
-	; Destroyed: eax, ecx?, edx?
+	; Destroyed: eax, ebx, ecx?, edx?
 	PUSH	dword ReadFMT
 	PUSH	esi
 	CALL	_fopen		; fopen(esi, "rb")
@@ -35,10 +35,11 @@ VM_LoadFile:
 	PUSH	dword Memory
 	CALL	_fread		; fread(Memory, 1, 256, file)
 	ADD	esp, 16
-	CMP	eax, 0
-	JE	.ReadFail
+	MOV	ebx, eax	; ugly fix
 	CALL	_fclose		; fclose(file)
 	ADD	esp, 4
+	CMP	ebx, 0
+	JE	.ReadFail
 	MOV	eax, 1
 	RET
 
